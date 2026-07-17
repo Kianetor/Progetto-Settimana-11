@@ -3,23 +3,15 @@ import { useSelector } from 'react-redux'
 function Player() {
   const currentTrack = useSelector((state) => state.player.currentTrack)
 
+  if (!currentTrack) return null
+
   return (
     <div className="now-playing-bar">
       <div className="now-playing-track">
-        {currentTrack ? (
-          <img src={currentTrack.cover} alt="" />
-        ) : (
-          <div className="now-playing-cover-placeholder" aria-hidden="true">
-            <i className="bi bi-plus-lg"></i>
-          </div>
-        )}
+        <img src={currentTrack.cover} alt="" />
         <div>
-          <p className="now-playing-title">
-            {currentTrack ? currentTrack.title : 'Nessuna traccia'}
-          </p>
-          <p className="now-playing-artist">
-            {currentTrack ? currentTrack.artist : 'Seleziona un brano'}
-          </p>
+          <p className="now-playing-title">{currentTrack.title}</p>
+          <p className="now-playing-artist">{currentTrack.artist}</p>
         </div>
       </div>
       <div className="now-playing-center">

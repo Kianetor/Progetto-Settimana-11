@@ -6,8 +6,8 @@ function Sidebar() {
       <div className="sidebar-top">
         <div className="brand">MusiCode</div>
         <nav className="sidebar-nav">
-          <a href="#">Home</a>
-          <a href="#">Your Library</a>
+          <a href="#"><i className="bi bi-house-door"></i> Home</a>
+          <a href="#"><i className="bi bi-music-note-list"></i> Your Library</a>
         </nav>
         <SearchBar />
       </div>
