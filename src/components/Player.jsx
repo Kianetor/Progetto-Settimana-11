@@ -22,12 +22,17 @@ function Player() {
           </p>
         </div>
       </div>
-      <div className="now-playing-controls" aria-hidden="true">
-        <i className="bi bi-shuffle"></i>
-        <i className="bi bi-skip-start-fill"></i>
-        <i className="bi bi-play-fill play"></i>
-        <i className="bi bi-skip-end-fill"></i>
-        <i className="bi bi-arrow-repeat"></i>
+      <div className="now-playing-center">
+        <div className="now-playing-controls" aria-hidden="true">
+          <i className="bi bi-shuffle"></i>
+          <i className="bi bi-skip-start-fill"></i>
+          <i className="bi bi-play-fill play"></i>
+          <i className="bi bi-skip-end-fill"></i>
+          <i className="bi bi-arrow-repeat"></i>
+        </div>
+        <div className="progress-track" aria-hidden="true">
+          <div className="progress-fill"></div>
+        </div>
       </div>
     </div>
   )

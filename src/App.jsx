@@ -16,19 +16,21 @@ function App() {
       <Sidebar />
       <div className="main-column">
         <MobileHeader />
-        <TopNav />
-        <main className="content">
-          {status === 'loading' && <p className="search-status">Cerco...</p>}
-          {status === 'failed' && (
-            <p className="search-status">Ricerca non riuscita, riprova.</p>
-          )}
-          {results.length > 0 && (
-            <Category title="Search Results" tracks={results} />
-          )}
-          <Category title="Rock Classics" tracks={rockClassics} />
-          <Category title="Pop Culture" tracks={popCulture} />
-          <Category title="Hip Hop" tracks={hipHop} />
-        </main>
+        <div className="page-content">
+          <TopNav />
+          <main className="content">
+            {status === 'loading' && <p className="search-status">Cerco...</p>}
+            {status === 'failed' && (
+              <p className="search-status">Ricerca non riuscita, riprova.</p>
+            )}
+            {results.length > 0 && (
+              <Category title="Search Results" tracks={results} />
+            )}
+            <Category title="Rock Classics" tracks={rockClassics} />
+            <Category title="Pop Culture" tracks={popCulture} />
+            <Category title="Hip Hop" tracks={hipHop} />
+          </main>
+        </div>
         <div className="bottom-dock">
           <Player />
           <BottomBar />
